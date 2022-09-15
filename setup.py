@@ -33,7 +33,7 @@ pvalues = dict(
     # duration=500,
     initinvestment=100000,
     instrument=[["TSLA", "AAPL"]],
-    benchmark=[["SPY"]],
+    benchmark="SPY",
     sma_fast=range(15, 46, 5),
     sma_slow=range(30, 61, 5),
     limit_price=0.07,
@@ -47,7 +47,7 @@ pvalues = dict(
     # SAVING
     save_path="result",
     save_name="my test name",
-    save_result=False,
+    save_result=True,
     save_excel=True,
     save_tearsheet=True,
     save_db=False,

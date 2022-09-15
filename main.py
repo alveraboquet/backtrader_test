@@ -485,7 +485,7 @@ class RunBacktest:
 
         # Get data from yahoo.
         #for ticker in scene["instrument"], scene["benchmark"]:
-        for ticker in (list(scene["instrument"])+list(scene["benchmark"])):
+        for ticker in (list(scene["instrument"])+list([scene["benchmark"]])):
             if ticker:
                 data = bt.feeds.YahooFinanceData(
                     dataname=f"csv/{ticker}.csv",
