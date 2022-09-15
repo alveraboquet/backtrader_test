@@ -488,7 +488,7 @@ class RunBacktest:
         for ticker in (list(scene["instrument"])+list(scene["benchmark"])):
             if ticker:
                 data = bt.feeds.YahooFinanceData(
-                    dataname=f"csv/{ticker}",
+                    dataname=f"csv/{ticker}.csv",
                     timeframe=bt.TimeFrame.Days,
                     fromdate=datetime.strptime(scene["from_date"], "%Y-%m-%d"),
                     todate=datetime.strptime(scene["to_date"], "%Y-%m-%d"),
