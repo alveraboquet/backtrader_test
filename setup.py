@@ -21,7 +21,7 @@ from main import RunBacktest
 # GENERAL SETTINGS
 print_params = True
 run_test_now = True
-multi_pro = True
+multi_pro = False
 reset_database = False
 
 # BACKTEST PARAMETERS
@@ -32,10 +32,10 @@ pvalues = dict(
     to_date="2022-09-14",
     # duration=500,
     initinvestment=100000,
-    instrument=["TSLA", "AAPL"],
-    benchmark="SPY",
-    sma_fast=range(15, 46, 2),
-    sma_slow=range(30, 61, 2),
+    instrument=[["TSLA", "AAPL"]],
+    benchmark=[["SPY"]],
+    sma_fast=range(15, 46, 5),
+    sma_slow=range(30, 61, 5),
     limit_price=0.07,
     stop_price=0.05,
     # TERMINAL OUTPUT
