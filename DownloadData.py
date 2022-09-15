@@ -94,6 +94,7 @@ def downloadDataAndSaveToPickle(stocklist, fromdate, todate, rootpath):
 
         try:
             if not exists(fn):
+                print(f"[{symbolname}] 다운로드 ...")
                 df = yf.download(symbolname, start=fromdate, end=todate, auto_adjust=False)
                 if len(df) < 1:
                     print(f"{symbolname} 데이터 길이가 0이라서 제외")
